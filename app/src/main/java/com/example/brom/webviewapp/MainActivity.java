@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
         WebView webView = new WebView(this);
         setContentView (webView);
         webView.loadUrl("http://wwwlab.iit.his.se/b18gussv/Dink/MobilAppDesign/Apokalys/apokalys.html");
+
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setLoadWithOverviewMode(true);
+        webSettings.setUseWideViewPort(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
+        webSettings.setSupportZoom(true);
+        webSettings.setDefaultTextEncodingName("utf-8");
+
         // The FAB-code can be removed
 
         // 2. Give the WebView element created in step 1 ID "my_webview"
