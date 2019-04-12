@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         WebView webView = new WebView(this);
         setContentView (webView);
-        webView.loadUrl("http://wwwlab.iit.his.se/b18gussv/Dink/MobilAppDesign/Apokalys/apokalys.html");
+        //webView.loadUrl("http://wwwlab.iit.his.se/b18gussv/Dink/MobilAppDesign/Apokalys/apokalys.html");
+        webView.loadUrl("file:///android_asset/about.html");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
